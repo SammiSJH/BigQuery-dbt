@@ -38,5 +38,11 @@ models:
     # schema: what schema we sould go and create in our BigQuery table
     staging:
       +enabled: true
-      +schema: stg_northwind
       +materialized: table
+      +schema: stg_northwind
+    warehouse:
+      +enabled: true
+      +materialized: table
+      +schema: dwh_northwind
+      dim_date:
+        +materialized: view
