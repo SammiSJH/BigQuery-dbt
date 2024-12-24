@@ -38,6 +38,7 @@ with source as (
     on e.id = po.created_by
     left join {{ ref('stg_customer') }} c
     on c.id = o.customer_id
+    where o.customer_id is not null
 ),
 unique_source as (
     select
