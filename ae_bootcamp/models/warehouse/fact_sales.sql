@@ -1,3 +1,13 @@
+-- use a field that will be frequently filtered as partition field
+{{
+    config(
+        partition_by = {
+            "field": "order_date",
+            "data_type": "date"
+        }
+    )
+}}
+
 with source as (
     select
         od.order_id,
@@ -12,7 +22,7 @@ with source as (
         od.date_allocated,
         od.purchase_order_id,
         od.inventory_id,
-        o.order_date,
+        date(o.order_date) as order_date,
         o.shipped_date,
         o.paid_date,
         current_timestamp() as insertion_timestamp
