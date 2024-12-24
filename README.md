@@ -11,11 +11,13 @@ The structures and steps for building the data warehouse are outlined below. I u
 ↓ Load
 
 3. Staging Layer (BigQuery)
+   * See files under ae_bootcamp/models/staging
 
 ↓ Transform (dbt)
 
-4. Dimensional Data Warehouse Layer (BigQuery)
+1. Dimensional Data Warehouse Layer (BigQuery)
+   * See files under ae_bootcamp/models/warehouse
 
 ↓ Transform
 
-5. Reporting Layer (OBT)
+1. Reporting Layer (OBT)
