@@ -2,19 +2,19 @@
 
 The structures and steps for building the data warehouse are outlined below. I use BigQuery for data storage and dbt as the transformation tool.
 
-1. Data Sources
+1. Data Sources (csv files)
 
 ↓ Extract Load
 
-2. Data Lake
+2. Data Lake (BigQuery)
 
 ↓ Load
 
-3. Staging Layer
+3. Staging Layer (BigQuery)
 
-↓ Transform
+↓ Transform (dbt)
 
-4. Dimensional Data Warehouse Layer (Star Schema data: fact and dimension table)
+4. Dimensional Data Warehouse Layer (BigQuery)
 
 ↓ Transform
 
